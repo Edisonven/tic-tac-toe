@@ -1,7 +1,10 @@
-export default function Square() {
+export default function Square({ children, setBoard, index }) {
+
   return (
     <section className="square__container">
-      <h1>Hola soy un cuadrado</h1>
+      <div className="app__game__square">
+        <span className="app__game__squarecontent"></span>
+      </div>
     </section>
   );
 }

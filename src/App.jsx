@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Square from "./components/Square";
 
 function App() {
   const turns = {
@@ -15,11 +16,10 @@ function App() {
         <h1 className="app__title">Tic - Tac - Toe</h1>
         <section className="app__game">
           {board.map((board) => {
-            return (
-              <div className="app__game__cell">
-                <span className="app__game__cellcontent">{board}</span>
-              </div>
-            );
+            return <Square>
+
+              
+            </Square>;
           })}
         </section>
       </main>
