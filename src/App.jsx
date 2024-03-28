@@ -11,11 +11,14 @@ function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(turns.X);
 
-  const updateBoard = () => {
+  const updateBoard = (index) => {
+    const newBoard = [...board];
+    newBoard[index] = turn;
+    setBoard(newBoard);
     const newTurn = turn === turns.X ? turns.O : turns.X;
     setTurn(newTurn);
   };
-  console.log(turn);
+
   return (
     <div className="app__container">
       <main className="app__board">

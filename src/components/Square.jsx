@@ -2,7 +2,7 @@ export default function Square({ isSelected, children, updateBoard, index }) {
   const className = `app__game__square ${isSelected ? "is-selected" : ""}`;
 
   const handleClick = () => {
-    updateBoard();
+    updateBoard(index);
   };
 
   return (
