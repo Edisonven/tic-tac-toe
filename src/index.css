@@ -1,6 +1,8 @@
+:root {
+  --backgound: #242424;
+  --color_1: #ffffffde;
+}
 * {
   margin: 0;
   box-sizing: border-box;
 }
-
-
