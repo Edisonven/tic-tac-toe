@@ -8,7 +8,7 @@ function App() {
     O: "o",
   };
 
-  const winnerComibatios = [
+  const winnerCombinatios = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -23,8 +23,23 @@ function App() {
   const [turn, setTurn] = useState(turns.X);
   const [winner, setWinner] = useState("");
 
+  const checkWinner = (boardToCheck) => {
+    for (const combo of winnerCombinatios) {
+      const [a, b, c] = combo;
+
+      if (
+        boardToCheck[a] &&
+        boardToCheck[a] === boardToCheck[b] &&
+        boardToCheck[a] === boardToCheck[c]
+      ) {
+        return boardToCheck[a];
+      }
+    }
+    return null;
+  };
+
   const updateBoard = (index) => {
-    if (board[index]) {
+    if (board[index] || winner) {
       return;
     }
     const newBoard = [...board];
@@ -32,6 +47,10 @@ function App() {
     setBoard(newBoard);
     const newTurn = turn === turns.X ? turns.O : turns.X;
     setTurn(newTurn);
+    const newWinner = checkWinner(newBoard);
+    if (newWinner) {
+      setWinner(newWinner);
+    }
   };
 
   return (
