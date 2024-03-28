@@ -15,11 +15,12 @@ function App() {
       <main className="app__board">
         <h1 className="app__title">Tic - Tac - Toe</h1>
         <section className="app__game">
-          {board.map((board) => {
-            return <Square>
-
-              
-            </Square>;
+          {board.map((board, index) => {
+            return (
+              <Square key={index}>
+                <span>{board}</span>
+              </Square>
+            );
           })}
         </section>
       </main>
