@@ -1,4 +1,6 @@
 .app__container {
+  display: flex;
+  justify-content: center;
   color: var(--color_1);
   background: var(--backgound);
   width: 100%;

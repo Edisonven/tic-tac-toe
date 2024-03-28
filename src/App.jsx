@@ -7,11 +7,11 @@ function App() {
     O: "o",
   };
 
-  const [board, setBoard] = useState(array(9).fill(null));
+  const [board, setBoard] = useState(Array(9).fill(null));
 
   return (
     <div className="app__container">
-      <h1>Hola soy la app</h1>
+      <h1 className="app__title">Tic - Tac - Toe</h1>
     </div>
   );
 }
