@@ -43,7 +43,7 @@
 
 .app__game__square.is-selected {
   color: #fff;
-  background: #09f;
+  background: rgb(115, 154, 180);
 }
 
 .app__game__turn .app__game__square,
