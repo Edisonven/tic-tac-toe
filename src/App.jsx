@@ -70,6 +70,16 @@ function App() {
           <Square isSelected={turn === turns.X}>{turns.X}</Square>
           <Square isSelected={turn === turns.O}>{turns.O}</Square>
         </section>
+        {winner !== "" && (
+          <section className="app__game__winner">
+            <div className="text">
+              <h2>{winner === false ? "Empate" : "Ganó"}</h2>
+              <header className="app__game__win">
+                {winner && <Square>{winner}</Square>}
+              </header>
+            </div>
+          </section>
+        )}
       </main>
     </div>
   );
