@@ -40,3 +40,10 @@
   color: #fff;
   background: #09f;
 }
+
+.app__game__turn .app__game__square {
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  border-color: transparent;
+}

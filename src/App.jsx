@@ -8,9 +8,14 @@ function App() {
     O: "o",
   };
 
-  const [board, setBoard] = useState(Array(9).fill("hola"));
+  const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(turns.X);
 
+  const updateBoard = () => {
+    const newTurn = turn === turns.X ? turns.O : turns.X;
+    setTurn(newTurn);
+  };
+  console.log(turn);
   return (
     <div className="app__container">
       <main className="app__board">
@@ -18,7 +23,7 @@ function App() {
         <section className="app__game">
           {board.map((board, index) => {
             return (
-              <Square key={index}>
+              <Square key={index} index={index} updateBoard={updateBoard}>
                 <span>{board}</span>
               </Square>
             );
