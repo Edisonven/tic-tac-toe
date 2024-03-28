@@ -3,12 +3,13 @@ import "./App.css";
 import Square from "./components/Square";
 
 function App() {
+  const [board, setBoard] = useState(Array(9).fill("hola"));
+  const [turn, setTurn] = useState("");
+  
   const turns = {
     X: "x",
     O: "o",
   };
-
-  const [board, setBoard] = useState(Array(9).fill("hola"));
 
   return (
     <div className="app__container">
