@@ -3,13 +3,13 @@ import "./App.css";
 import Square from "./components/Square";
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill("hola"));
-  const [turn, setTurn] = useState("");
-  
   const turns = {
     X: "x",
     O: "o",
   };
+
+  const [board, setBoard] = useState(Array(9).fill("hola"));
+  const [turn, setTurn] = useState(turns.X);
 
   return (
     <div className="app__container">
@@ -23,6 +23,10 @@ function App() {
               </Square>
             );
           })}
+        </section>
+        <section className="app__game__turn">
+          <Square isSelected={turn === turns.X}>{turns.X}</Square>
+          <Square isSelected={turn === turns.O}>{turns.O}</Square>
         </section>
       </main>
     </div>

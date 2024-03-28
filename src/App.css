@@ -26,3 +26,17 @@
   cursor: pointer;
   font-size: 48px;
 }
+
+.app__game__turn {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+}
+
+.app__game__square.is-selected {
+  color: #fff;
+  background: #09f;
+}
